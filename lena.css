@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #ffe6f2;
+    color: #333;
+    text-align: center;
+}
+
+header{
+    background-color: #ff1493;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#hero img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#hero{
+     background-size: cover;
+     position: relative;
+     background-image: url('lena.jpg');
+     background-size: cover;
+     background-position: center;
+     height: 60vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2{
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+}
+
+#products{
+    padding: 40px;
+}
+
+.product-list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product{
+    background-color: #ff69b4;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: rotateY(180deg);
+}
+
+footer{
+    background-color: #ff1493;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: #ff69b4;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    margin-top: 15px;
+}
+
+.shop-btn:hover {
+    background: #ff1493;
+    transform: scale(1.1);
+}
+
+.product:hover {
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+}
+
+.whatsapp-float{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #25d366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float img{
+    width: 35px;
+    height: 35px;
+}
+
+#preloader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white url('loader.gif') no-repeat center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.hidden{
+    display: none;
+}
+
+#preloader{
+    background: white;
+}
+#preloader::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg); }
+    100% { transform: rotate(360deg);}
+}
